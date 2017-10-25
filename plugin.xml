@@ -22,6 +22,9 @@
 				<param name="onload" value="true" />
 			</feature>
 
+			<!-- this entry is for cocoapods to support swift frameworks -->
+			<preference name="pods_use_frameworks" value="true" />
+
 			<!-- this entry is to set project deployment target -->
 	        <preference name="deployment-target" value="8.4" />
 
@@ -35,8 +38,9 @@
 
 		<hook type="before_build" src="scripts/fixEntitlementsBuildSetting.js"/>
 		<hook type="before_run" src="scripts/fixEntitlementsBuildSetting.js"/>
-		<framework src="libs/ios/Carthage/Build/iOS/MobileMessaging.framework" custom="true" embed="true"/>
+		<framework src="MobileMessaging" type="podspec" spec="== 2.8.7"/>
 		<source-file src="src/ios/MobileMessagingCordova.swift" />
+
 	</platform>
 	
 	<platform name="android">
