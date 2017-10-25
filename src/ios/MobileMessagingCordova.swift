@@ -202,7 +202,7 @@ fileprivate class MobileMessagingEventsManager {
 	override func pluginInitialize() {
 		super.pluginInitialize()
 		self.messageStorageAdapter = MessageStorageAdapter(plugin: self)
-		MobileMessagingCordovaApplicationDelegate.install()
+		//MobileMessagingCordovaApplicationDelegate.install()
 		self.eventsManager = MobileMessagingEventsManager(plugin: self)
 		performEarlyStartIfPossible()
 	}
